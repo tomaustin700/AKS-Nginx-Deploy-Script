@@ -1,7 +1,7 @@
 $resourceGroup = Read-Host "Enter Resource Group Name"
 $resourceGroupLocation = Read-Host "Enter Resouce Group Location"
 $aksName = Read-Host "Enter AKS Cluster Name"
-$aksDNSName = Read-Host "Enter AKS DNS Suffix"
+$aksDNSName = Read-Host "Enter AKS DNS Prefix"
 
 
 if ((az group exists --name $resourceGroup) -eq $false) {
