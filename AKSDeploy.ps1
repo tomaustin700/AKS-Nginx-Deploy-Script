@@ -26,7 +26,7 @@ catch {
 az aks get-credentials --resource-group $resourceGroup --name $aksName --overwrite-existing
 kubectl create namespace ingress-basic
 
-$aksRG = az aks show --resource-group AKS1 --name AKS --query nodeResourceGroup -o tsv
+$aksRG = az aks show --resource-group $resourceGroup --name $aksName --query nodeResourceGroup -o tsv
 $publicIP = az network public-ip create --resource-group $aksRG --name AKSPublicIP --sku Standard --allocation-method static --query publicIp.ipAddress -o tsv
 
 Write-Output "Downloading Helm to C:\Helm"
