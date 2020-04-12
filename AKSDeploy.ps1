@@ -74,5 +74,5 @@ kubectl apply -f $tmpIngress.FullName --namespace ingress-basic
 
 Remove-Item -Path $tmpIngress.FullName
 
-Write-Output "Test your AKS instance by navigating to the following url"
+Write-Output "Test your AKS instance by navigating to the following url - it may take a few minutes to start working"
 Write-Output $fqdn
