@@ -36,7 +36,7 @@ Invoke-WebRequest -Uri "https://get.helm.sh/helm-v3.1.2-windows-amd64.zip" -OutF
 Expand-Archive -LiteralPath 'C:\Helm\Helm.zip' -DestinationPath C:\Helm -Force
 
 Set-Location C:\Helm\windows-amd64
-.\helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+.\helm repo add stable https://charts.helm.sh/stable
 .\helm repo update
 .\helm install nginx-ingress stable/nginx-ingress --namespace ingress-basic --set controller.replicaCount=2 --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux --set controller.service.loadBalancerIP="$publicIP"
 
